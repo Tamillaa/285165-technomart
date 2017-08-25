@@ -11,32 +11,63 @@ overflow: hidden;
 
 
 body {
-	font-size: 13px;
-	line-height: 24px;
-	color: #000000;
-	font-weight: 400;
-	font-family: "Cuprum", "Arial", sans-serif;
 	margin: 0;
 	padding: 0;
-	min-height: 960px;
+	
+	font-family: "Cuprum", "Arial Narrow", sans-serif;
+	font-size: 17px;
+	line-height: 17px;
+	font-weight: 400;
+	text-transform: lowercase;
+	color: #ffffff;
+}
+
+body :first-letter {
+	text-transform: uppercase;
+}
+
+a {
+	text-decoration: none;
+}
+
+.top-header {
+	background-color: #293449;
+}
+
+.logo-main-header  {
+	padding: 12px 55px;
+	background-color: #ee3643;
+	box-shadow: 0 5px 0 0 #b52933;
+}
+
+.logo-main-header:hover,
+.logo-main-header:focus {
+	background-color: #ca2c37;
+	box-shadow: 0 5px 0 0 #9a212a;
+}
+
+.logo-main-header:active {
+	background-color: #ba2732;
+	box-shadow: 0 5px 0 0 #8e1e26;
 }
 
 .title-popular {
 	font-size: 30px;
 	line-height: 30px;
 	text-transform: uppercase;
-	color: #3d546e;
+	color: #32425c;
 } 
 
 .title-service {
 	font-size: 30px;
 	line-height: 24px;
 	text-transform: uppercase;
+	color: #000000;
 }
 
 .title-slider {
 	font-size: 36px;
 	line-height: 24px;
 	text-transform: uppercase;
-	color: #3d546e;
+	color: #32425c;
 }
