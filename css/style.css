@@ -1,3 +1,18 @@
+*, *::before, *::after {
+	box-sizing: inherit;
+}
+
+html {
+	box-sizing: border-box;
+}
+
+.content-box-component {
+	box-sizing: content-box;
+}
+
+
+
+
 .visually-hidden {
 position: absolute;
 width: 1px;
@@ -10,6 +25,12 @@ overflow: hidden;
 }
 
 
+
+
+
+
+
+
 body {
 	margin: 0;
 	padding: 0;
@@ -20,24 +41,43 @@ body {
 	font-weight: 400;
 	text-transform: lowercase;
 	color: #ffffff;
+	min-height: 960px;
 }
 
 body :first-letter {
 	text-transform: uppercase;
 }
 
+.container {
+	width: 960px;
+	margin: 0 auto;
+	padding: 0 10px;
+}
+
 a {
 	text-decoration: none;
 }
+
+ /*header.............................................................................*/
 
 .top-header {
 	background-color: #293449;
 }
 
+.content-top-header {
+	display: flex;
+	justify-content: space-between;
+	
+}
+
+
+
 .logo-main-header  {
+	font-size: 0;
+	line-height: 0;
 	padding: 12px 55px;
 	background-color: #ee3643;
-	box-shadow: 0 5px 0 0 #b52933;    /*Разобраться с центровкой*/
+	box-shadow: 0 5px 0 0 #b52933; 
 }
 
 .logo-main-header:hover,
@@ -51,8 +91,95 @@ a {
 	box-shadow: 0 5px 0 0 #8e1e26;
 }
 
+
+
+.search-form {
+	width: 270px;
+}
+
+.search {
+	width: 270px;
+	font-family: "Cuprum", "Arial-Narrow", sans-serif;
+	font-weight: 400;
+	font-size: 17px;
+	line-height: 18px;
+	background-color:  #293449;
+	border: none;
+	padding: 12px 20px;
+	padding-left: 50px;
+}
+
+.search::-webkit-input-placeholder {
+	color: #ffffff;
+}
+
+.search:hover,
+.list-group:hover,
+.list-group:focus {
+	background-color: #212a3a;
+}
+
+.search:focus {
+	background-color: #ffffff;
+}
+
+.search:focus::-webkit-input-placeholder {
+	color: #000000;
+}
+
+
+
+.list-top-header {
+	margin: 0;
+	padding: 0;
+	font-size: 0;
+	list-style: none;
+	width: 450px;	
+	display: flex;
+	justify-content: space-between;
+}
+
+.list-top-header li {
+	font-size: 17px;
+	line-height: 18px;
+}
+
+.list-top-header a {
+	display: block;
+	width: 150px;
+	color: #ffffff;	
+}
+
+.list-group {
+	padding: 12px 20px;
+	padding-left: 50px;
+}
+
+.list-group:active {
+	background-color: #161d29;
+}
+
+.order {
+	padding: 12px 20px;
+	background-color: #63a63e;
+}
+
+.order:hover,
+.order:focus {
+	background-color: #5fbb2d;
+}
+
+.order:active {
+	background-color: #518534;
+}
+
 .bottom-header {
 	background-color: #f3f7f9;
+}
+
+.header-bottom-header {
+	display: flex;
+	justify-content: space-between;
 }
 
 .main-navigation {
@@ -98,7 +225,9 @@ a {
 }
 
 .logo-main-footer  {
+	font-size: 0;
+	line-height: 0;
 	padding: 21px 41px;
 	background-color: #ee3643;
-	box-shadow: 0 5px 0 0 #b52933;    /*Разобраться с центровкой*/
+	box-shadow: 0 5px 0 0 #b52933;    
 }
