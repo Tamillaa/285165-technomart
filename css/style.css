@@ -616,6 +616,38 @@ a {
 	color: #ee3643;
 }
 
+/*Обратная связь...........................................*/
 
+.feedback {
+	background-color: #ffffff;
+	width: 620px;
+	height: 430px;
+	box-shadow: inset 0 7px 0 0 #ff5357;
+}
 
+.feedback-form label {
+	font-family: inherit;
+	font-size: 18px;
+	line-height: 18px;
+	
+	color: #000000;
+}
+
+.feedback-form input,
+.feedback-form textarea {
+	font-family: "PT Sans", "Arial", sans-serif;
+	font-size: 13px;
+	line-height: 18px;
+	font-weight: 400;
+	
+	color: #a9a9a9;
+	
+	border: 2px solid #dee3e4;
+}
+
+.feedback-form-btn {
+	border: none;
+	
+	background-color: #ee3643;
+}
 
