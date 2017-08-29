@@ -361,7 +361,7 @@ a {
 }
 
 .slider-item-perforators p {
-	font-family: "PT Sans", "Arial", sans-serif;s
+	font-family: "PT Sans", "Arial", sans-serif;
 	font-size: 18px;
 	line-height: 24px;
 	font-weight: 400;
@@ -400,11 +400,12 @@ a {
 	background-color: #ee3643;
 }
 
-.card-product {
+.card-item {
 	border: 1px solid #eaeaea;
 }
 
-.card-product:hover {
+.card-item:hover,
+.card-item:focus {
 	box-shadow: 0 10px 25px 0 rgba(41, 52, 73, 0.5);
 }
 
@@ -455,15 +456,67 @@ a {
 	color: rgba(50, 66, 92, 0.3);
 }
 
-.title-service {
+.card-brand:active .popular-brand {
+	opacity: 0.3;
+}
+
+.card-brand:active {
+	box-shadow: 0 4px 10px 0 rgba(41, 52, 73, 0.5);
+}
+
+.service {
+	background-color:#f4f8f9;  
+}
+
+.title-service,
+.title-info-company {
 	font-size: 30px;
 	line-height: 24px;
 	text-transform: uppercase;
 	color: #000000;
 }
 
-.service {
-	background-color:#f4f8f9;  
+.content-service p,
+.info p {
+	font-family: "PT Sans", "Arial", sans-serif;
+	font-size: 13px;
+	line-height: 24px;
+	font-weight: 400;
+	color: #000000;
+}
+
+.btn-service {
+	font-family: inherit;
+	border: none;
+	
+	background-color: #32425c;
+	box-shadow: 0 1px 0 0 #293449,
+				inset 0 1px 0 0 #405069;
+	font-size: 21px;
+	line-height: 30px;                       
+	font-weight: 700;
+	color: #ffffff;
+}
+
+.btn-service:hover,
+.btn-service:focus {
+	background-color: #293449;
+	box-shadow: 0 1px 0 0 #293449,
+				inset 0 1px 0 0 #405069;
+}
+
+.btn-service:active {
+	background-color: #ffffff;
+	color: #32425c;
+	box-shadow: 0 1px 0 0 #ffffff,
+				inset 0 1px 0 0 #ffffff;
+}
+
+.active-btn-service {
+	background-color: #ffffff;
+	color: #32425c;
+	box-shadow: 0 1px 0 0 #ffffff,
+				inset 0 1px 0 0 #ffffff;
 }
 
 .title-service-slider {
@@ -473,12 +526,44 @@ a {
 	color: #32425c;
 }
 
-.top-footer {
-	background-color: #32425c;
+.slider-item-delivery {
+	background-image: url(/img/delivery.png);
+	background-repeat: no-repeat;
 }
 
-.bottom-footer {
-	background-color: #293449;
+.slider-item-guaranty {
+	background-image: url(/img/garant.png);
+	background-repeat: no-repeat;
+}
+
+.slider-item-credit {
+	background-image: url(/img/credit.png);
+	background-repeat: no-repeat;
+}
+
+.btn-credit {
+	background-color: #ff5357;
+}
+
+.delivery-companies {
+	list-style: none;
+	
+	font-size: 18px;
+	line-height: 20px;
+	
+	color: #000000;
+}
+
+.info-company .btn {
+	background-color: #ee3643;
+}
+
+/*Футер............................................................................................*/
+
+.top-footer {
+	background-color: #32425c;
+	font-size: 18px;
+	line-height: 24px;
 }
 
 .logo-main-footer  {
@@ -488,3 +573,49 @@ a {
 	background-color: #ee3643;
 	box-shadow: 0 5px 0 0 #b52933;    
 }
+
+.group-top-footer ul {
+	list-style: none;
+}
+
+.nav-footer a {
+	color: #f3f7f9;
+}
+
+.nav-footer-components a {
+	color: #ffd180;
+}
+
+.group-top-footer a:hover,
+.group-top-footer a:focus {
+	text-decoration: underline;
+}
+
+.group-top-footer a:active {
+	opacity: 0.5;
+}
+
+.bottom-footer {
+	background-color: #293449;
+	font-size: 16px;
+	line-height: 18px;
+	
+	color:#ffffff;
+}
+
+.group-bottom-footer a {
+	color: #ffd180;
+}
+
+.group-bottom-footer a:hover,
+.group-bottom-footer a:focus{
+	text-decoration: underline;
+}
+
+.group-bottom-footer a:active {
+	color: #ee3643;
+}
+
+
+
+
