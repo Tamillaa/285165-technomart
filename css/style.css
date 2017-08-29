@@ -647,7 +647,10 @@ a {
 
 .feedback-form-btn {
 	border: none;
-	
 	background-color: #ee3643;
+}
+
+.feedback-form-send {
+	background-color: #f4f4f4;
 }
 
