@@ -565,8 +565,9 @@ a {
 .active-btn-service:focus,
 .active-btn-service:active {
 	outline: none;
-	box-shadow: none;
 	background-color: #ffffff;
+	box-shadow: 0 1px 0 0 #ffffff,
+				inset 0 1px 0 0 #ffffff;
 	cursor: default;
 }
 
@@ -742,6 +743,20 @@ a {
 	text-transform: uppercase;
 }
 
+.breadcrumbs-link[href]:hover,
+.breadcrumbs-link[href]:focus {
+	text-decoration: underline;
+}
+
+.breadcrumbs-link[href]:active {
+	text-decoration: none;
+	color: #32425c;
+}
+
+.active-breadcrumbs-link {
+	cursor: default;
+}
+
 .main-title {
 	background-color: #f2f6f8;
 }
@@ -810,18 +825,18 @@ a {
 	color: #000000;
 }
 
-.choice-link {
+.choice-link[href] {
 	color: rgba(0, 0, 0, 0.3);
 	border-bottom: 1px dashed #ee3643;
 }
 
-.choice-link:hover,
-.choice-link:focus {
+.choice-link[href]:hover,
+.choice-link[href]:focus {
 	color: #000000;
 	border-bottom: 1px solid #ee3643;
 }
 
-.choice-link:active {
+.choice-link[href]:active {
 	color: #ee3643;
 	border-bottom: none;
 }
@@ -829,30 +844,33 @@ a {
 .active-link {
 	color: #ee3643;
 	border-bottom: none;
+	cursor: default;
 }
 
 .perforators-pagination ul {
 	list-style: none;
 }
 
-.pagination-item {
+.perforators-pagination li {
 	font-family: "PT Sans", "Arial", sans-serif;
 	font-size: 13px;
 	line-height: 18px;
 	font-weight: 400;
 	
 	text-transform: uppercase;
+}
+
+.pagination-item[href] {
 	color: #000000;
-	
 	border: 1px solid #e5e5e5;
 }
 
-.pagination-item:hover,
-.pagination-item:focus {
+.pagination-item[href]:hover,
+.pagination-item[href]:focus {
 	border: 1px solid #bdc6ca;
 }
 
-.pagination-item:active {
+.pagination-item[href]:active {
 	border: 1px solid #ee3643;
 }
 
@@ -890,7 +908,16 @@ a {
 	background-color: #ee3643;
 }
 
-.btn-buy {
+.btn-shopping {
 	background-color: #ffffff;
 	color: #000000;
+}
+
+.btn-shopping:hover,
+.btn-shopping:focus {
+	background-color: #e2e0e0;
+}
+
+.btn-shopping:active {
+	background-color: #bdc6ca;
 }
