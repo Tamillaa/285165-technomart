@@ -167,11 +167,12 @@ a {
 
 .bottom-header {
 	background-color: #f3f7f9;
+	padding-top: 46px;
+	padding-bottom: 60px;
 }
 
 .header-bottom-header {
 	display: flex;
-	padding-top: 46px;
 	padding-bottom: 42px;
 	padding-left: 53px;
 }
@@ -315,18 +316,31 @@ a {
 
 /*Главная.............................................................................*/
 
+.components-list {
+	padding-top: 60px;
+	padding-bottom: 53px;
+}
+
 .wrap-components-first {
 	display: flex;
 	justify-content: space-between;
+	margin-bottom: 20px;
 	
+}
+
+.wrap-components-second {
+	display: flex;
+	justify-content: space-between;
+}
+
+.components-item {
+	width: 300px;
 }
 
 .title-item-components {
 	margin: 0;
 	padding: 0;
 	
-	width: 300px;
-		
 	font-size: 24px;
 	line-height: 30px;
 	font-weight: 700;
@@ -371,6 +385,7 @@ a {
 
 .discounts-item {
 	background-color: #8ed78f;
+	margin-bottom: 20px;
 }
 
 .delivery-item {
@@ -427,6 +442,8 @@ a {
 }
 
 .standart-title {
+	margin: 0;
+	
 	font-size: 30px;
 	line-height: 30px;
 	font-weight: 400;
@@ -435,6 +452,13 @@ a {
 } 
 
 .section-title-popular {
+	display: flex;
+	justify-content: space-between;
+	
+	padding-left: 31px;
+	padding-right: 24px;
+	margin-bottom: 20px;
+	
 	background-color: #f9f5f0;
 }
 
@@ -442,8 +466,23 @@ a {
 	background-color: #ee3643;
 }
 
+.card-list {
+	margin: 0;
+	padding: 0;
+	
+	display: flex;
+	justify-content: space-between;
+	flex-wrap: wrap;
+}
+
 .card-item {
 	border: 1px solid #eaeaea;
+	width: 220px;
+	margin-bottom: 20px;
+}
+
+.card-brand:nth-child(n+5) {
+	margin-bottom: 85px;
 }
 
 .card-item:hover,
@@ -519,9 +558,15 @@ a {
 	background-color:#f4f8f9;  
 }
 
+.content-service {
+	padding-top: 65px;
+}
+
 .title-service,
 .title-info-company,
 .title-info-perforator {
+	margin: 0;
+	
 	font-size: 30px;
 	line-height: 24px;
 	font-weight: 400;
@@ -532,11 +577,22 @@ a {
 .info-perforator p,
 .content-service p,
 .info p {
+	margin: 0;
+	
 	font-family: "PT Sans", "Arial", sans-serif;
 	font-size: 13px;
 	line-height: 24px;
 	font-weight: 400;
 	color: #000000;
+}
+
+.service-sliders {
+	display: flex;
+	justify-content: space-between;
+}
+
+.control-service-sliders {
+	width: 240px;
 }
 
 .btn-service {
@@ -583,6 +639,10 @@ a {
 	box-shadow: 0 1px 0 0 #ffffff,
 				inset 0 1px 0 0 #ffffff;
 	cursor: default;
+}
+
+.sliders-service-list > div {
+	width: 620px;
 }
 
 .title-service-slider {
