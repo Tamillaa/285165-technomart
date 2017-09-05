@@ -672,7 +672,27 @@ a {
 	background-color: #ff5357;
 }
 
+.info {
+	padding-top: 80px;
+	padding-bottom: 86px;
+}
+
+.info > .container  {
+	display: flex;
+	justify-content: space-between;
+}
+
+.info-company {
+	width: 540px;
+}
+
+.info-contacts {
+	width: 300px;
+}
+
 .delivery-companies {
+	margin: 0;
+	padding: 0;
 	list-style: none;
 	
 	font-size: 18px;
@@ -688,10 +708,20 @@ a {
 
 /*Футер............................................................................................*/
 
+
+
 .top-footer {
 	background-color: #32425c;
 	font-size: 18px;
 	line-height: 24px;
+	
+	padding-bottom: 51px;
+}
+
+.header-top-footer {
+	display: flex;
+	justify-content: space-between;
+	margin-bottom: 29px
 }
 
 .logo-main-footer  {
@@ -713,12 +743,34 @@ a {
 	box-shadow: 0 5px 0 0 #8e1e26;
 }
 
+.footer-top-footer {
+	display: flex;
+	justify-content: space-between;
+}
+
+.contacts-footer {
+	width: 326px;
+}
+
 .group-top-footer ul {
+	margin: 0;
+	padding: 0;
 	list-style: none;
+	
+	display: flex;
+	justify-content: space-between;
+}
+
+.nav-footer {
+	width: 548px;
 }
 
 .nav-footer a {
 	color: #f3f7f9;
+}
+
+.nav-footer-components {
+	width: 525px;
 }
 
 .nav-footer-components a {
@@ -740,6 +792,32 @@ a {
 	line-height: 18px;
 	
 	color:#ffffff;
+	
+	padding-top: 35px;
+	padding-bottom: 31px;
+}
+
+.content-bottom-footer {
+	display: flex;
+}
+
+.copyright-footer {
+	width: 230px;
+	margin-right: 160px;
+}
+
+.social-footer {
+	width: 132px;
+	margin-right: 118px;
+}
+
+.feedback-footer {
+	width: 140px;
+}
+
+.author-footer {
+	width: 110px;
+	margin-left: auto;
 }
 
 .group-bottom-footer a {
