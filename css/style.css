@@ -218,12 +218,10 @@ a {
 	color: #32425c;
 }
 
-.user-block {
+.unauthorized-user {
 	width: 280px;
 	margin-left: auto;
-}
-
-.unauthorized-user {
+	
 	display: flex;
 	justify-content: space-between;
 }
@@ -880,8 +878,22 @@ a {
 /*Каталог..........................................................................................................*/
 
 
+.authorized-user {
+	width: 300px;
+	margin-left: auto;
+}
+
 .breadcrumbs ul {
+	margin: 0;
+	padding: 0;
 	list-style: none;
+	
+	margin-top: 24px;
+	margin-bottom: 24px;
+	
+	display: flex;
+	
+	width: 380px;
 }
 
 .breadcrumbs-link {
@@ -911,9 +923,22 @@ a {
 
 .main-title {
 	background-color: #f2f6f8;
+	padding: 31px;
+	margin-bottom: 20px;
+}
+
+.wrap-perforators-first {
+	display: flex;
+	justify-content: space-between;
+}
+
+.selection {
+	width: 220px;
 }
 
 .title-selection {
+	margin: 0;
+	
 	font-family: "PT Sans", "Arial", sans-serif;
 	font-size: 13px;
 	line-height: 18px;
@@ -959,6 +984,10 @@ a {
 	background-color: #ffffff;
 }
 
+.wrap-perforators-second {
+	width: 700px;
+}
+
 .choice {
 	font-family: "PT Sans", "Arial", sans-serif;
 	font-size: 13px;
@@ -970,10 +999,14 @@ a {
 }
 
 .choice ul {
+	margin: 0;
+	padding: 0;
 	list-style: none;
 }
 
 .choice p {
+	margin: 0;
+	
 	color: #000000;
 }
 
@@ -1000,6 +1033,8 @@ a {
 }
 
 .perforators-pagination ul {
+	margin: 0;
+	padding: 0;
 	list-style: none;
 }
 
@@ -1032,7 +1067,13 @@ a {
 }
 
 .info-perforator {
+	padding-top: 63px;
+	padding-bottom: 73px;
 	background-color: #f2f6f8;
+}
+
+.title-info-perforator {
+	margin-bottom: 30px;
 }
 
 
