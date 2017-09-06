@@ -13,15 +13,22 @@ html {
 
 
 
-.visually-hidden {
-position: absolute;
-width: 1px;
-height: 1px;
-margin: -1px;
-border: 0;
-padding: 0;
-clip: rect(0 0 0 0);
-overflow: hidden;
+.visually-hidden:not(:focus):not(:active),
+input[type="checkbox"].visually-hidden,
+input[type="radio"].visually-hidden {
+  position: absolute;
+
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+
+  white-space: nowrap;
+
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
 }
 
 
@@ -45,6 +52,11 @@ body {
 
 a {
 	text-decoration: none;
+}
+
+img {
+	max-width: 100%;
+	height: auto;
 }
 
 
@@ -88,6 +100,7 @@ a {
 }
 
 .search-form {
+	position: relative;
 	width: 270px;
 }
 
@@ -121,6 +134,22 @@ a {
 	color: #000000;
 }
 
+.search-icon {
+	position: absolute;
+	top: 12px;
+	left: 16px;
+	
+	opacity: 0.3;
+}
+
+.search-form:hover .search-icon {
+	opacity: 1;
+}
+
+.search:focus + .search-icon path {
+	fill: #ee3643;
+}
+
 .list-top-header {
 	margin: 0;
 	padding: 0;
@@ -139,16 +168,65 @@ a {
 .list-top-header a {
 	display: block;
 	width: 150px;
+	
+	vertical-align: middle;
 	color: #ffffff;	
 }
 
 .list-group {
+	position: relative;
 	padding: 12px 20px;
 	padding-left: 50px;
 }
 
 .list-group:active {
 	background-color: #161d29;
+}
+
+.bookmark::before {
+	content: "";
+	
+	width: 14px;
+	height: 16px;
+	
+	position: absolute;
+	top: 13px;
+	left: 18px;
+	
+	background-image: url(/img/svg-technomart/icon-bookmark.svg);
+	background-repeat: no-repeat;
+	background-position: 0 0;
+	
+	opacity: 0.3;
+}
+
+.basket::before {
+	content: "";
+	
+	width: 15px;
+	height: 15px;
+	
+	position: absolute;
+	top: 13px;
+	left: 17px;
+	
+	background-image: url(/img/svg-technomart/icon-cart.svg);
+	background-repeat: no-repeat;
+	background-position: 0 0;
+	
+	opacity: 0.3;
+}
+
+.bookmark:hover::before,
+.bookmark:focus::before,
+.basket:hover::before,
+.basket:focus::before {
+	opacity: 1;
+}
+
+.bookmark:active::before,
+.basket:active::before {
+	opacity: 0.5;
 }
 
 .order {
@@ -469,14 +547,23 @@ a {
 	padding: 0;
 	
 	display: flex;
-	justify-content: space-between;
+	justify-content: flex-start;
 	flex-wrap: wrap;
 }
 
 .card-item {
 	border: 1px solid #eaeaea;
 	width: 220px;
+	margin-right: 20px;
 	margin-bottom: 20px;
+}
+
+.popular-perforator-item:nth-child(4) {
+	margin-right: 0;
+}
+
+.card-brand:nth-child(4n) {
+	margin-right: 0;
 }
 
 .card-brand:nth-child(n+5) {
@@ -1032,7 +1119,11 @@ a {
 	cursor: default;
 }
 
-.perforators-pagination ul {
+.perforator-item:nth-child(3n) {
+	margin-right: 0;
+}
+
+.perforators-pagination {
 	margin: 0;
 	padding: 0;
 	list-style: none;
