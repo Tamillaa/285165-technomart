@@ -677,8 +677,9 @@ img {
 
 .section-title-popular {
 	display: flex;
-	justify-content: space-between;
+	justify-content: flex-start;
 	align-items: center;
+	flex-wrap: wrap;
 	
 	background-color: #f9f5f0;
 	
@@ -686,16 +687,18 @@ img {
 }
 
 .section-title-popular h2 {
-	min-height: 30px;
-	padding: 29px 0;
-	padding-left: 31px;
+	width: 460px;
+	padding: 29px 31px;
 }
 
 .btn-popular {
+	display: block;
 	margin-left: auto;
 	width: 253px;
-	padding: 10px 0;
+	height: 38px;
+	line-height: 38px;
 	margin-right: 24px;
+	white-space: nowrap;
 	
 	background-color: #ee3643;
 	border-radius: 3px;
@@ -822,12 +825,12 @@ img {
 	width: 135px;
 	margin: 0 auto;
 	margin-bottom: 8px;
-	padding: 10px 0;
 	border-radius: 3px;
 }
 
 .product-buy-btn {
 	position: relative;
+	padding: 10px 0;
 	
 	background-color: #63a63e;
 	box-shadow: inset 0 -3px 0 0 #367315;
@@ -871,6 +874,7 @@ img {
 }
 
 .product-bookmark-btn {
+	padding: 7px 0;
 	border: 3px solid #63a63e;
 	color: #32425c;
 }
@@ -1043,8 +1047,8 @@ img {
 }
 
 .info {
-	padding-top: 80px;
-	padding-bottom: 86px;
+	padding-top: 75px;
+	padding-bottom: 85px;
 }
 
 .info > .container  {
@@ -1060,21 +1064,89 @@ img {
 	width: 300px;
 }
 
+.title-info-company {
+	margin-bottom: 30px;
+}
+
+.info-company > p:nth-of-type(1),
+.info-contacts > p:nth-of-type(1) {
+	margin-top: 30px;
+	margin-bottom: 33px;
+}
+
+.info-company > p:nth-of-type(2) {
+	margin-top: 33px;
+	margin-bottom: 24px;
+}
+
 .delivery-companies {
 	margin: 0;
 	padding: 0;
 	list-style: none;
 	
+	display: flex;
+	flex-direction: column;
+	
+	margin-top: 24px;
+	margin-bottom: 37px;
+	padding-left: 35px;
 	font-size: 18px;
 	line-height: 20px;
 	
 	color: #000000;
 }
 
-.btn-info-company,
-.btn-question-adress {
+.delivery-companies li {
+	position: relative;
+	
+	display: block;
+	margin-bottom: 20px;
+}
+
+.delivery-companies li:nth-child(3) {
+	margin-bottom: 0;
+}
+
+.delivery-companies li::before {
+	content: "";
+	
+	position: absolute;
+	top: 9px;
+	left: -35px;
+	
+	width: 25px;
+	height: 2px;
 	background-color: #ee3643;
 }
+
+.map-adress {
+	display: block;
+	width: 300px;
+	height: 159px;
+	margin-top: 37px;
+	margin-bottom: 45px;
+}
+
+.btn-info-company,
+.btn-question-adress {
+	display: block;
+	height: 38px;
+	line-height: 38px;
+	white-space: nowrap;
+	
+	border-radius: 3px;
+	background-color: #ee3643;
+}
+
+.btn-info-company {
+	width: 220px;
+}
+
+.btn-question-adress {
+	width: 300px;
+}
+
+
 
 /*Футер............................................................................................*/
 
@@ -1131,11 +1203,13 @@ img {
 	justify-content: space-between;
 }
 
-.nav-footer {
+.nav-footer ul {
 	width: 548px;
+	align-items: flex-end;
 }
 
 .nav-footer a {
+	display: block;
 	color: #f3f7f9;
 }
 
@@ -1144,6 +1218,7 @@ img {
 }
 
 .nav-footer-components a {
+	display: block;
 	color: #ffd180;
 }
 
