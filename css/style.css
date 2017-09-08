@@ -181,6 +181,7 @@ img {
 
 .list-group:active {
 	background-color: #161d29;
+	color: rgba(255, 255, 255, 0.6);
 }
 
 .bookmark::before {
@@ -241,6 +242,7 @@ img {
 
 .order:active {
 	background-color: #518534;
+	color: rgba(255, 255, 255, 0.51);
 }
 
 .bottom-header {
@@ -277,7 +279,11 @@ img {
 .phone-contacts {
 	display: block;
 	width: 270px;
-	height: 45px;   /*Потом удалю*/
+	padding: 12px 0 12px 75px;
+	
+	position: relative;
+	
+	vertical-align: middle;
 	
 	border: 3px solid #ffffff;
 	
@@ -288,12 +294,29 @@ img {
 	margin-bottom: 5px;
 }
 
+.phone-contacts::before {
+	content: "";
+	
+	position: absolute;
+	top: 13px;
+	left: 17px;
+	
+	width: 19px;
+	height: 19px;
+	
+	background-image: url(/img/svg-technomart/icon-phone.svg);
+	background-repeat: no-repeat;
+	background-position: 0 0;
+}
+
 .address-contacts {
 	margin: 0;
 	
 	font-size: 14px;
 	line-height: 24px;
 	color: #32425c;
+	
+	padding-left: 10px;
 }
 
 .unauthorized-user {
@@ -312,14 +335,33 @@ img {
 	
 	font-size: 21px;
 	line-height: 18px;
+	vertical-align: middle;
+	
 	color: #000000;
 	
 	background-color: #ffffff;
 }
 
 .login {
+	position: relative;
+	
 	padding: 12px 24px;
 	padding-left: 48px;
+}
+
+.login svg {
+	position: absolute;
+	top: 13px;
+	left: 14px;
+}
+
+.login:hover path,
+.login:focus path {
+	fill: #32425c;
+}
+
+.login:active path {
+	fill: #c5c5c5;
 }
 
 .signup {
@@ -370,12 +412,18 @@ img {
 	padding: 0;
 	list-style: none;
 	
+	padding-left: 21px;
+	padding-right: 24px;
+	
 	display: flex;
-	justify-content: space-around;
+	flex-wrap: wrap;
 }
 
 .nav-list a {
 	display: block;
+	padding: 21px 30px;
+	
+	vertical-align: middle;
 	color: #ffffff;
 }
 
@@ -529,25 +577,27 @@ img {
 
 .section-title-popular {
 	display: flex;
-	justify-content: space-between;
-	
-	padding-left: 31px;
-	padding-right: 24px;
-	margin-bottom: 20px;
+	flex-wrap: wrap;
 	
 	background-color: #f9f5f0;
+	
+	padding: 29px 24px 29px 31px;
+	margin-bottom: 20px;
 }
 
 .btn-popular {
+	margin-left: auto;
 	background-color: #ee3643;
 }
 
 .card-list {
 	margin: 0;
 	padding: 0;
+	list-style: none;
 	
 	display: flex;
 	justify-content: flex-start;
+	align-items: flex-start;
 	flex-wrap: wrap;
 }
 
@@ -562,17 +612,26 @@ img {
 	margin-right: 0;
 }
 
-.card-brand:nth-child(4n) {
-	margin-right: 0;
+.card-product {
+	position: relative;
+	text-align: center;
 }
 
-.card-brand:nth-child(n+5) {
-	margin-bottom: 85px;
+.flag {
+	position: absolute;
+	width: 60px;
+	height: 59px;
+	
+	top: -1px;
+	right: -1px;
+	
+	z-index: 20;
 }
 
-.card-item:hover,
-.card-item:focus {
-	box-shadow: 0 10px 25px 0 rgba(41, 52, 73, 0.5);
+.new-product {
+	background-image: url(/img/new.png);
+	background-repeat: no-repeat;
+	background-position: 0 0;
 }
 
 .card-product h3 {
@@ -581,6 +640,11 @@ img {
 	line-height: 20px;
 	font-weight: 700;
 	color: #000000;
+	
+	min-height: 40px;
+	padding: 0 25px;
+	margin-top: 28px;
+	margin-bottom: 13px;
 }
 
 .card-product-price {
@@ -592,18 +656,88 @@ img {
 }
 
 .old-price {
+	min-height: 18px;
+	
 	color: #a9a9a9;
 	text-decoration: line-through;
+	
+	margin-top: 13px;
+	margin-bottom: 10px;
+	
 }
 
 .price {
+	display: block;
+	position: relative;
+	
+	width: 140px;
+	margin: 10px auto;
+	margin-bottom: 20px;
+	padding: 10px 36px;
+	
 	background-color: #ee3643;
 	color: #ffffff;
+	border-radius: 3px;
+}
+
+.price::after {
+	content: "";
+	
+	position: absolute;
+	top: 0;
+	right: -20px;
+	
+	width: 0;
+	height: 0;
+	border: 19px solid #ffffff;
+	border-left-color: #ee3643;
+}
+
+.card-product-control {
+	position: absolute;
+	top: 0;
+	left: 0;
+	
+	width: 218px;
+	height: 152px;
+	padding: 45px 0;
+	background-color: #ffffff;
+	
+	z-index: 10;
+}
+
+.card-product-control a {
+	display: block;
+	width: 135px;
+	margin: 0 auto;
+	margin-bottom: 8px;
+	padding: 10px 0;
+	border-radius: 3px;
 }
 
 .product-buy-btn {
+	position: relative;
+	
 	background-color: #63a63e;
 	box-shadow: inset 0 -3px 0 0 #367315;
+}
+
+.product-buy-btn::before {
+	content: "";
+	
+	position: absolute;
+	top: 11px;
+	left: 14px;
+	
+	width: 15px;
+	height: 15px;
+	
+	background-image: url(/img/svg-technomart/icon-cart.svg);
+	background-repeat: no-repeat;
+	background-position: 0 0;
+	
+	opacity: 0.3;
+	
 }
 
 .product-buy-btn:hover,
@@ -614,6 +748,15 @@ img {
 .product-buy-btn:active {
 	background-color: #518534;
 	box-shadow: none;
+}
+
+.product-buy-btn:hover::before,
+.product-buy-btn:focus::before {
+	opacity: 1;
+}
+
+.product-buy-btn:active::before {
+	opacity: 1;
 }
 
 .product-bookmark-btn {
@@ -629,6 +772,37 @@ img {
 .product-bookmark-btn:active {
 	border: 3px solid rgba(50, 66, 92, 0.3);
 	color: rgba(50, 66, 92, 0.3);
+}
+
+.card-product-control {
+	display: none;
+}
+
+.card-item:hover .card-product-control {
+	display: block;
+}
+
+.card-brand {
+	height: 145px;
+	
+	display: flex;
+}
+
+.card-brand a {
+	margin: auto;
+}
+
+.card-brand:nth-child(4n) {
+	margin-right: 0;
+}
+
+.card-brand:nth-child(n+5) {
+	margin-bottom: 85px;
+}
+
+.card-item:hover,
+.card-item:focus {
+	box-shadow: 0 10px 25px 0 rgba(41, 52, 73, 0.5);
 }
 
 .card-brand:active .popular-brand {
@@ -1010,7 +1184,8 @@ img {
 
 .main-title {
 	background-color: #f2f6f8;
-	padding: 31px;
+	
+	padding: 29px 24px 29px 31px;
 	margin-bottom: 20px;
 }
 
