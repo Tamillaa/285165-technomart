@@ -66,6 +66,26 @@ img {
 	padding: 0 10px;
 }
 
+.btn {
+	font-size: 14px;
+	line-height: 18px;
+	
+	color: #ffffff;
+	text-transform: uppercase;
+	text-align: center;
+	vertical-align: middle;
+	
+}
+
+.btn-red:hover,
+.btn-red:focus {
+	background-color: #ca2c37;
+}
+
+.btn-red:active {
+	background-color: #ba2732;
+}
+
 
 
  /*header.............................................................................*/
@@ -489,17 +509,6 @@ img {
 	margin-bottom:  13px;
 }
 
-.btn {
-	font-size: 14px;
-	line-height: 18px;
-	
-	color: #ffffff;
-	text-transform: uppercase;
-	text-align: center;
-	vertical-align: middle;
-	
-}
-
 .btn-item-components {
 	display: block;
 	width: 135px;
@@ -616,23 +625,28 @@ img {
 	background-position: 0 0;
 }
 
+/*------------------------СЛАЙДЕР-----------------------------------*/
+
 .slider {
+	position: relative;
 	width: 620px;
 	height: 266px;
 }
 
-.slider-item-perforators {
-	background-color: dimgray;
-	background-image: url(/img/slider1.jpg);
+.slider-item {
+	display: none;
 }
 
-.slider-item-drills {
-	background-color: dimgray;
-	background-image: url(/img/slider2.jpg);
+.slider-text {
+	padding-top: 20px;
+	padding-left: 25px;
+	
 }
 
 .title-slider-item {
 	margin: 0;
+	
+	margin-bottom: 5px;
 	
 	font-size: 36px;
 	line-height: 30px;
@@ -640,29 +654,102 @@ img {
 	text-transform: uppercase;
 }
 
-.slider-item-perforators p {
+.slider-perforators p {
+	margin: 0;
+	
 	font-family: "PT Sans", "Arial", sans-serif;
 	font-size: 18px;
 	line-height: 24px;
 	font-weight: 400;
 }
 
-.slider-item-drills p {
+.slider-drills p {
+	margin: 0;
+	
 	font-size: 18px;
 	line-height: 24px;
 }
 
+.prev-btn {
+	position: absolute;
+	top: 114px;
+	left: 25px;
+	cursor: pointer;
+	
+	z-index: 100;
+}
+
+.next-btn {
+	position: absolute;
+	top: 114px;
+	right: 20px;
+	cursor: pointer;
+	
+	z-index: 100;
+}
+
 .btn-open-catalog {
+	position: absolute;
+	top: 206px;
+	left: 25px;
+	
+	display: block;
+	width: 195px;
+	height: 38px;
+	line-height: 38px;
+	white-space: nowrap;
+	
+	border-radius: 3px;
 	background-color: #ee3643;
+	
+	z-index: 100;
 }
 
-.btn-red:hover,
-.btn-red:focus {
-	background-color: #ca2c37;
+.dots-slider-item {
+	display: flex;
+	justify-content: center;
+	
+	position: absolute;
+	bottom: 36px;
+	left: 50%;
+	
+	width: 100px;
+	height: 10px;
+	margin-left: -50px;
+	
+	z-index: 100;
 }
 
-.btn-red:active {
-	background-color: #ba2732;
+.dot-slider-item {
+	width: 10px;
+	height: 10px;
+	margin: 0 5px;
+	
+	border-radius: 5px;
+	background-color: #ffffff;
+	border: 2px solid #ffffff;
+	cursor: pointer;
+}
+
+
+#btn-1:checked ~ .slider .slider-perforators,
+#btn-2:checked ~ .slider .slider-drills {
+	display: block;
+}
+
+#btn-1:checked ~ .slider {
+	background-color: dimgray;
+	background-image: url(/img/slider1.jpg);
+}
+
+#btn-2:checked ~ .slider {
+	background-color: dimgray;
+	background-image: url(/img/slider2.jpg);
+}
+
+#btn-1:checked ~ .slider .prev-dot,
+#btn-2:checked ~ .slider .next-dot {
+	background-color: #ee3643; 
 }
 
 .standart-title {
