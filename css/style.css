@@ -1027,20 +1027,22 @@ img {
 
 .title-service + p {
 	margin-top: 30px;
-	margin-bottom: 25px;
+	
 }
 
 .service-sliders {
-	position: relative;
+	display: flex;
+	justify-content: space-between;
+	
+	margin-top: 30px;
+	padding-top: 45px;
 	width: 940px;
-	height: 334px;
+	height: 328px;
 }
 
 .control-service-sliders {
-	position: absolute;
-	top: 50px;
-	left: 0;
-	
+	position: relative;
+		
 	width: 240px;
 	
 	vertical-align: middle; 
@@ -1048,8 +1050,6 @@ img {
 	font-size: 21px;
 	line-height: 30px;                       
 	font-weight: 700;
-	
-	z-index: 100;
 }
 
 .control-service-sliders::after {
@@ -1089,10 +1089,7 @@ img {
 }
 
 .slider-service-item {
-	position: absolute;
-	top: 0;
-	left: 0;
-	width: 100%;
+	width: 620px;
 	height: 100%;
 	
 	display: none;
@@ -1100,10 +1097,9 @@ img {
 
 .title-service-slider {
 	margin: 0;
-	padding-top: 50px;
-	padding-bottom: 30px;
-	padding-left: 320px;
 	
+	padding-bottom: 30px;
+		
 	font-size: 36px;
 	line-height: 24px;
 	font-weight: 400;
@@ -1112,13 +1108,10 @@ img {
 }
 
 .slider-service-item p {
-	padding-left: 320px;
 	padding-bottom: 30px;
 }
 
 .btn-credit {
-	margin-left: 320px;
-	
 	display: block;
 	width: 195px;
 	height: 38px;
@@ -1507,23 +1500,35 @@ img {
 
 .feedback-form-group {
 	display: flex;
-	flex-wrap: wrap;
-	justify-content: space-between;
+	justify-content: center;
 	
-	padding: 0 80px;
+	margin: 0 80px;
+	margin-bottom: 20px;
 	padding-top: 52px;
 }
 
-.feedback-form-personal-info {
+.feedback-form-personal-info input {
 	width: 220px;
+	padding: 10px 17px;
 }
 
 .feedback-form-message {
 	width: 460px;
+	margin: 0 80px;
+	margin-bottom: 37px;
 }
 
 .feedback-form-btn {
 	border: none;
+	
+	width: 460px;
+	height: 38px;
+	line-height: 38px;
+	white-space: nowrap;
+	
+	border-radius: 3px;
+	
+	margin: 37px 80px;
 	
 	font-family: "Cuprum", "Arial Narrow", sans-serif;
 	font-size: 14px;
@@ -1538,6 +1543,9 @@ img {
 
 /*Каталог..........................................................................................................*/
 
+.btn-current {
+	background-color: #ee3643;
+}
 
 .authorized-block {
 	width: 300px;
@@ -1571,19 +1579,14 @@ img {
 	padding-left: 50px;
 }
 
+.name-user:active {
+	color: rgba(0, 0, 0, 0.3);
+}
+
 .name-user svg {
 	position: absolute;
 	top: 13px;
 	left: 15px;
-}
-
-.name-user:hover path,
-.name-user:focus path {
-	fill: #32425c;
-}
-
-.name-user:active path {
-	column-fill: #c5c5c5;
 }
 
 .icon-out {
@@ -1597,8 +1600,19 @@ img {
 	right: 10px;
 }
 
-.orders-user,
-.profile-user {
+.name-user:hover path,
+.name-user:focus path,
+.icon-out:hover path,
+.icon-out:focus path {
+	fill: #32425c;
+}
+
+.name-user:active path,
+.icon-out:active path {
+	fill: #c5c5c5;
+}
+
+.data-user a {
 	font-size: 16px;
 	line-height: 18px;
 	color: #32425c;
@@ -1627,7 +1641,6 @@ img {
 	position: absolute;
 	top: 7px;
 	left: 110px;
-	
 }
 
 .orders-user:hover,
@@ -1637,46 +1650,79 @@ img {
 	color: #ee3643;
 }
 
-.name-user:active,
 .orders-user:active,
 .profile-user:active {
-	opacity: 0.3;
+	color: rgba(50, 66, 92, 0.3);
 }
-
-
 
 .breadcrumbs ul {
 	margin: 0;
 	padding: 0;
 	list-style: none;
 	
-	margin-top: 24px;
-	margin-bottom: 24px;
-	
 	display: flex;
-	
-	width: 380px;
+	justify-content: flex-start;
+	flex-wrap: wrap;
 }
 
 .breadcrumbs-link {
+	display: block;
+	
+	position: relative;
+	
+	padding: 24px 0;
+	padding-right: 25px;
+	margin-right: 20px;
+	
 	font-family: "PT Sans", "Arial", sans-serif;
 	font-size: 13px;
 	line-height: 18px;
 	font-weight: 400;
 	
+	vertical-align: middle;
 	color: #000000;
 	
 	text-transform: uppercase;
 }
 
+/*.icon-home svg {
+	position: absolute;
+	top: 27px;
+	left: 0;
+}*/
+
+.breadcrumbs-link::after {
+	content: "";
+	width: 8px;
+	height: 12px;
+	
+	position: absolute;
+	top: 27px;
+	right: 0;
+	
+	background-image: url(../img/svg-technomart/icon-right-small.svg);
+	background-repeat: no-repeat;
+	background-position: 0 0;
+}
+
+
 .breadcrumbs-link[href]:hover,
 .breadcrumbs-link[href]:focus {
-	text-decoration: underline;
+	color: #32425c;
 }
 
 .breadcrumbs-link[href]:active {
-	text-decoration: none;
-	color: #32425c;
+	color: #c1c6ce;
+	
+}
+
+.icon-home:hover path,
+.icon-home:focus path {
+	fill: #32425c;
+}
+
+.icon-home:active path {
+	fill: #c1c6ce;
 }
 
 .active-breadcrumbs-link {
@@ -1701,6 +1747,8 @@ img {
 
 .title-selection {
 	margin: 0;
+	margin-bottom: 20px;
+	padding: 10px 20px;
 	
 	font-family: "PT Sans", "Arial", sans-serif;
 	font-size: 13px;
@@ -1710,6 +1758,7 @@ img {
 	color: #000000;
 	text-transform: uppercase;
 	background-color: #f7f3ec;
+	vertical-align: middle;
 }
 
 .selection legend {
@@ -1752,25 +1801,85 @@ img {
 }
 
 .choice {
+	display: flex;
+	justify-content: flex-start;
+	
 	font-family: "PT Sans", "Arial", sans-serif;
 	font-size: 13px;
 	line-height: 18px;
 	font-weight: 400;
 	text-transform: uppercase;
+	vertical-align: middle;
+	
+	margin-bottom: 20px;
 	
 	background-color: #f7f3ec;
+}
+
+.choice p {
+	margin: 0;
+	
+	margin-right: 100px;
+	padding: 10px 20px;
+	color: #000000;
 }
 
 .choice ul {
 	margin: 0;
 	padding: 0;
 	list-style: none;
+	
+	display: flex;
+	justify-content: flex-start;
 }
 
-.choice p {
-	margin: 0;
+.choice li {
+	display: block;
+	padding: 10px 20px;
+}
+
+.choice li:nth-child(1) {
+	margin-right: 30px;
+}
+
+.choice li:nth-child(2) {
+	margin-right: 24px;
+}
+
+.control-choice {
+	position: relative;
 	
-	color: #000000;
+	margin-left: auto;
+	width: 60px;
+}
+
+.btn-control path {
+	fill: #c5c5c5;
+}
+
+.btn-up svg {
+	position: absolute;
+	top: 14px;
+	left: 0;
+}
+
+.btn-down svg {
+	position: absolute;
+	top: 14px;
+	right: 17px;
+}
+
+.btn-control[href]:hover path,
+.btn-control[href]:focus path {
+	fill: #231f20;
+}
+
+.btn-control[href]:active path {
+	fill: #ee3643;
+}
+
+.btn-active path {
+	fill: #ee3643;
 }
 
 .choice-link[href] {
@@ -1799,14 +1908,16 @@ img {
 	margin-right: 0;
 }
 
-.perforator-item:nth-child(3) .card-product-control {
-	display: block;
-}
-
 .perforators-pagination {
 	margin: 0;
+	margin-top: 32px;
+	margin-bottom: 60px;
 	padding: 0;
+	
 	list-style: none;
+	
+	display: flex;
+	justify-content: flex-start;
 }
 
 .perforators-pagination li {
@@ -1816,6 +1927,28 @@ img {
 	font-weight: 400;
 	
 	text-transform: uppercase;
+}
+
+.pagination-item {
+	display: block;
+	
+	margin-right: 10px;	
+	
+	height: 38px;
+	line-height: 38px;
+	white-space: nowrap;
+	text-align: center;
+	vertical-align: middle;
+	
+	border-radius: 3px;
+}
+
+.pagination-item:not(.pagination-item-next) {
+	width: 38px;
+}
+
+.pagination-item-next {
+	width: 140px;
 }
 
 .pagination-item[href] {
