@@ -430,24 +430,20 @@
     		<h2 class="visually-hidden">Обратная связь</h2>
 			<form class="feedback-form" action="#" method="post">
 				<div class="feedback-form-group">
-					<div class="feedback-form-personal-info">
-						<label>
-							Ваше имя:
-							<input class="username" type="text" name="username" placeholder="Представьтесь, пожалуйста">
-						</label>
-					</div>	
-					<div class="feedback-form-personal-info">
-						<label>
-							Ваш e-mail:
-							<input class="email" type="text" name="email" placeholder="Для отправки ответа">
-						</label>
+					<div class="wrap-feedback-form">
+						<div class="feedback-form-personal-info">
+							<label for="personal-username">Ваше имя:</label>
+							<input id="personal-username" type="text" name="username" placeholder="Представьтесь, пожалуйста">
+						</div>	
+						<div class="feedback-form-personal-info">
+							<label for="personal-email">Ваш e-mail:</label>
+							<input id="personal-email" type="text" name="email" placeholder="Для отправки ответа">
+						</div>
 					</div>
-				</div>
-				<div class="feedback-form-message">
-					<label>
-						Текст письма:
-						<textarea  class="message" name="message" cols="60" rows="15" placeholder="В свободной форме:"></textarea>
-					</label>
+					<div class="feedback-form-message">
+						<label for="form-message">Текст письма:</label>
+						<textarea  id="form-message" name="message" placeholder="В свободной форме:"></textarea>
+					</div>
 				</div>
 				<div class="feedback-form-send">
 					<button class="btn btn-red feedback-form-btn" type="submit">Отправить</button>
